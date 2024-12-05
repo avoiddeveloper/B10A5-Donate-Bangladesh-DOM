@@ -28,7 +28,7 @@
                 <div class="">
                     <div class="flex items-center gap-1">
                         <img src="./assets/coin.png" alt="coin">
-                        <p class="font-medium lg:text-xl text-subText"><span>5500</span>BDT</p>
+                        <p class="font-medium lg:text-xl text-subText"><span id="balance">5500</span>BDT</p>
                     </div>
                     <button onclick="window.location.href='blog.html'"
                         class="flex lg:hidden btn bg-themePrimary font-semibold text-xl text-mainText px-7">Blog</button>
@@ -37,8 +37,8 @@
         </nav>
         <!-- Tabs -->
         <div class="container mx-auto py-7 flex justify-center items-center gap-5">
-            <button class="btn font-medium text-xl text-subText bg-transparent">Donation</button>
-            <button class="btn font-medium text-xl text-subText bg-transparent">History</button>
+            <button id="donationBtn" class="btn font-medium text-xl text-subText bg-themePrimary">Donation</button>
+            <button id="historyBtn" class="btn font-medium text-xl text-subText">History</button>
         </div>
     </header>
 
@@ -54,11 +54,12 @@
                     <div>
                         <button class="btn">
                             <img src="./assets/coin.png" alt="coin">
-                            <p class="font-normal text-base text-subText"><span>0</span> BDT</p>
+                            <p class="font-normal text-base text-subText"><span id="donatedOneBalance">0</span> BDT</p>
                         </button>
                     </div>
                     <div class="space-y-6">
-                        <h3 class="font-bold text-xl text-mainText">Donate for Flood at Noakhali, Bangladesh</h3>
+                        <h3 id="title1" class="font-bold text-xl text-mainText">Donate for Flood at Noakhali, Bangladesh
+                        </h3>
                         <p class="font-light text-base text-subText"> The recent floods in Noakhali have caused
                             significant
                             damage to homes infrastructure. Your
@@ -71,9 +72,10 @@
                             impact on the lives of those in need.</p>
                     </div>
                     <div class="space-y-5">
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                        <input id="donate1" type="number" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full" />
                         <button class="btn w-full bg-themePrimary font-semibold text-xl text-mainText"
-                            onclick="my_modal_5.showModal()">Donate
+                            onclick="donate1()">Donate
                             Now</button>
                         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                             <div class="modal-box text-center space-y">
@@ -101,11 +103,13 @@
                     <div>
                         <button class="btn">
                             <img src="./assets/coin.png" alt="coin">
-                            <p class="font-normal text-base text-subText"><span>600</span> BDT</p>
+                            <p class="font-normal text-base text-subText"><span id="donatedTwoBalance">600</span> BDT
+                            </p>
                         </button>
                     </div>
                     <div class="space-y-6">
-                        <h3 class="font-bold text-xl text-mainText">Donate for Flood Relief in Feni,Bangladesh</h3>
+                        <h3 id="title2" class="font-bold text-xl text-mainText">Donate for Flood Relief in
+                            Feni,Bangladesh</h3>
                         <p class="font-light text-base text-subText">The recent floods in Feni have devastated local
                             communities, leading to severe disruption and loss. Your generous donation will help provide
                             immediate aid, including food, clean water, and medical supplies, to those affected by this
@@ -116,9 +120,10 @@
                             today to assist those in urgent need.</p>
                     </div>
                     <div class="space-y-5">
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                        <input id="donate2" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full" />
                         <button class="btn w-full bg-themePrimary font-semibold text-xl text-mainText"
-                            onclick="my_modal_6.showModal()">Donate
+                            onclick="donate2()">Donate
                             Now</button>
                         <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
                             <div class="modal-box text-center space-y">
@@ -146,11 +151,13 @@
                     <div>
                         <button class="btn">
                             <img src="./assets/coin.png" alt="coin">
-                            <p class="font-normal text-base text-subText"><span>2400</span> BDT</p>
+                            <p class="font-normal text-base text-subText"><span id="donatedThreeBalance">2400</span> BDT
+                            </p>
                         </button>
                     </div>
                     <div class="space-y-6">
-                        <h3 class="font-bold text-xl text-mainText">Aid for Injured in the Quota Movement</h3>
+                        <h3 id="title3" class="font-bold text-xl text-mainText">Aid for Injured in the Quota Movement
+                        </h3>
                         <p class="font-light text-base text-subText"> The recent Quota movement has resulted in numerous
                             injuries and significant hardship for many individuals. Your support is crucial in providing
                             medical assistance, rehabilitation, and necessary supplies to those affected. By
@@ -163,9 +170,10 @@
                             time of need.</p>
                     </div>
                     <div class="space-y-5">
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full" />
+                        <input id="donate3" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full" />
                         <button class="btn w-full bg-themePrimary font-semibold text-xl text-mainText"
-                            onclick="my_modal_7.showModal()">Donate
+                            onclick="donate3()">Donate
                             Now</button>
                         <dialog id="my_modal_7" class="modal modal-bottom sm:modal-middle">
                             <div class="modal-box text-center space-y">
@@ -187,23 +195,6 @@
 
         <!-- History -->
         <div id="historyTab" class="space-y-5 hidden">
-            <div class="border rounded-2xl p-8 space-y-2">
-                <p class="font-bold text-xl text-mainText">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</p>
-                <p class="font-light text-base text-subText">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh
-                    Standard Time)</p>
-            </div>
-
-            <div class="border rounded-2xl p-8 space-y-2">
-                <p class="font-bold text-xl text-mainText">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</p>
-                <p class="font-light text-base text-subText">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh
-                    Standard Time)</p>
-            </div>
-
-            <div class="border rounded-2xl p-8 space-y-2">
-                <p class="font-bold text-xl text-mainText">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</p>
-                <p class="font-light text-base text-subText">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh
-                    Standard Time)</p>
-            </div>
         </div>
     </main>
 
@@ -229,6 +220,7 @@
         }
     </script>
     <!-- Custom JS -->
+    <script src="./JS/utilities.js"></script>
     <script src="./JS/main.js"></script>
 </body>
 
