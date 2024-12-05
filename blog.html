@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- Google Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    </style>
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="font-lexend">
+
+    <header>
+        <!-- Navbar -->
+        <nav class="bg-[#F9F7F3]">
+            <div class="container mx-auto py-6 flex justify-between items-center">
+                <button onclick="window.location.href='index.html'"
+                    class="hidden lg:flex btn bg-themePrimary font-semibold text-xl text-mainText px-7">Blog</button>
+                <div class="flex items-center gap-3">
+                    <img src="./assets/logo.png" alt="logo">
+                    <p class="font-semibold text-xl text-mainText">Blogs</p>
+                </div>
+                <div class="">
+                    <div class="flex items-center gap-1">
+                        <img src="./assets/coin.png" alt="coin">
+                        <p class="font-medium lg:text-xl text-subText"><span>5500</span>BDT</p>
+                    </div>
+                    <button onclick="window.location.href='index.html'"
+                        class="flex lg:hidden btn bg-themePrimary font-semibold text-xl text-mainText px-7">Blog</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto">
+        <!-- Title -->
+        <div class="py-8">
+            <h1 class="font-bold text-mainText text-5xl">Important FAQ</h1>
+        </div>
+
+        <!-- FAQ Container -->
+        <div class="space-y-4">
+            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                <div class="collapse-title text-xl font-medium">What Is Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                    <p>
+                        The DOM (Document Object Model) is a programming interface for web documents. It represents the
+                        structure of a webpage as a tree of objects, making it possible to manipulate the content,
+                        structure, and styles of a webpage dynamically using JavaScript.</p>
+                </div>
+            </div>
+
+
+            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                <div class="collapse-title text-xl font-medium">How do your select an element from the DOM</div>
+                <div class="collapse-content">
+                    <p>
+                        <span>document.getElementById("myDiv"); // By ID</span><br>
+                        <span>document.getElementsByClassName("box")[0]; // By Class</span><br>
+                        <span>document.getElementsByTagName("div")[0];// By Tag</span><br>
+                        <span>document.querySelector("#myDiv"); // CS</span>
+
+                    </p>
+                </div>
+            </div>
+
+            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                <div class="collapse-title text-xl font-medium">What Is Event Delegation in the context of the DOM?
+                </div>
+                <div class="collapse-content">
+                    <p>
+                        Event delegation is a technique in JavaScript where you add a single event listener to a parent
+                        element instead of adding event listeners to multiple child elements. This works because events
+                        propagate through the DOM tree via a process called event bubbling.</p>
+                </div>
+            </div>
+
+            <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                <div class="collapse-title text-xl font-medium">What Is Event Handling in DOM?</div>
+                <div class="collapse-content">
+                    <p>
+                        Event handling in programming, particularly in the context of web development, refers to the
+                        process of managing and responding to events triggered by user actions or the browser. Events
+                        can include a wide range of activities</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        themePrimary: '#B4F461',
+                        mainText: '#111111',
+                        subText: '#111111B3',
+                    },
+                    fontFamily: {
+                        lexend: ['Lexend', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom JS -->
+    <script src="./JS/main.js"></script>
+</body>
+
+</html>
