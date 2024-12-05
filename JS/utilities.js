@@ -26,3 +26,8 @@ function createHistory(title, amount, mainDiv) {
     `
     document.getElementById(mainDiv).appendChild(div)
 }
+
+// Clear Input
+function clearInputField(id) {
+    document.getElementById(id).value = '';
+}

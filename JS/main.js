@@ -30,6 +30,7 @@ function donate1() {
             mainBalance(donateAmount);
             donatedAmount('donatedOneBalance', donateAmount);
             document.getElementById('my_modal_5').showModal();
+            clearInputField('donate1');
             createHistory('title1', donateAmount, 'historyTab');
 
         } else {
@@ -49,6 +50,7 @@ function donate2() {
             mainBalance(donateAmount)
             donatedAmount('donatedTwoBalance', donateAmount);
             document.getElementById('my_modal_6').showModal();
+            clearInputField('donate2');
             createHistory('title2', donateAmount, 'historyTab');
         } else {
             return alert('insufficient balance')
@@ -67,6 +69,7 @@ function donate3() {
             mainBalance(donateAmount)
             donatedAmount('donatedThreeBalance', donateAmount);
             document.getElementById('my_modal_7').showModal();
+            clearInputField('donate3');
             createHistory('title3', donateAmount, 'historyTab');
         } else {
             return alert('insufficient balance')
