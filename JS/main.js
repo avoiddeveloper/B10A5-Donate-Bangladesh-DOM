@@ -21,9 +21,11 @@ document.getElementById('historyBtn').addEventListener('click', function (event)
 
 // Card - 1
 function donate1() {
+    const donateAmountField = document.getElementById('donate1').value;
     const donateAmount = getInputValue('donate1');
-    if (donateAmount < 0) {
-        return alert('Please insert Positive Amount')
+
+    if (donateAmountField === '' || donateAmount < 0) {
+        return alert('Please Insert Positive Amount')
     } else {
         const currentBalance = parseFloat(document.getElementById('balance').innerText);
         if (currentBalance !== 0) {
@@ -41,9 +43,10 @@ function donate1() {
 
 // Card - 2
 function donate2() {
+    const donateAmountField = document.getElementById('donate2').value;
     const donateAmount = getInputValue('donate2');
-    if (donateAmount < 0) {
-        return alert('Please insert Positive Amount')
+    if (donateAmountField === '' || donateAmount < 0) {
+        return alert('Please Insert Positive Amount')
     } else {
         const currentBalance = parseFloat(document.getElementById('balance').innerText);
         if (currentBalance !== 0) {
@@ -60,9 +63,10 @@ function donate2() {
 
 // Card - 2
 function donate3() {
+    const donateAmountField = document.getElementById('donate3').value;
     const donateAmount = getInputValue('donate3');
-    if (donateAmount < 0) {
-        return alert('Please insert Positive Amount')
+    if (donateAmountField === '' || donateAmount < 0) {
+        return alert('Please Insert Positive Amount')
     } else {
         const currentBalance = parseFloat(document.getElementById('balance').innerText);
         if (currentBalance !== 0) {
